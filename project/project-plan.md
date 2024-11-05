@@ -13,7 +13,7 @@ In this project, the specifics of tertiary education enrollment in the Americas 
 
 ## Datasources
 
-### Datasource1: World Bank Group
+### Datasource: World Bank Group
 * Metadata URL: https://www.worldbank.org/ext/en/home
 * Data URL: https://data.worldbank.org/indicator/SE.TER.ENRR?view=chart&locations=US-AG-BS-BB-BZ-CA-CR-CU-DO-SV-GD-GT-HT-HN-JM-MX-NI-PA-KN-LC-VC-TT-AR-BO-BR-CL-CO-EC-GY-PY-PE-SR-UY-VE
 * Data Type: CSV
@@ -23,7 +23,7 @@ From the World Bank data, it gives the percentage of people enrolled in tertiary
 ## Work Packages
 
  ### Work Package 1: Data Collection
- ##### . Import tertiary education enrollment data from the data source into a pandas DataFrame for analysis.
+ #####  Import tertiary education enrollment data from the data source into a pandas DataFrame for analysis.
 
  ### Work Package 2: Data Cleaning
  #####  Address missing values, remove duplicates, and validate the accuracy of enrollment rates and other relevant fields to ensure data integrity.
