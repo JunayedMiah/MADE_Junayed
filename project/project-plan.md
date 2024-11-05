@@ -22,17 +22,17 @@ From the World Bank data, it gives the percentage of people enrolled in tertiary
 
 ## Work Packages
 
-### Work Package 1: Data Collection
-##### . Import tertiary education enrollment data from the data source into a pandas DataFrame for analysis.
+ ### Work Package 1: Data Collection
+ ##### . Import tertiary education enrollment data from the data source into a pandas DataFrame for analysis.
 
-### Work Package 2: Data Cleaning
-##### . Address missing values, remove duplicates, and validate the accuracy of enrollment rates and other relevant fields to ensure data integrity.
+ ### Work Package 2: Data Cleaning
+ #####  Address missing values, remove duplicates, and validate the accuracy of enrollment rates and other relevant fields to ensure data integrity.
 
-### Work Package 3: Exploratory Analysis
-##### . Analyze trends across different countries in the Americas and explore correlations between education access, income inequality, and economic growth indicators.
+ ### Work Package 3: Exploratory Analysis
+ #####  Analyze trends across different countries in the Americas and explore correlations between education access, income inequality, and economic growth indicators.
 
-### Work Package 4: Data Pipeline Development
-##### . Design a modular data pipeline for efficient data extraction, transformation, and storage, ensuring easy updates and maintenance.
+ ### Work Package 4: Data Pipeline Development
+ #####  Design a modular data pipeline for efficient data extraction, transformation, and storage, ensuring easy updates and maintenance.
 
-### Work Package 5: Reporting and Visualization
-##### . Summarize key findings in a report and create visualizations (charts and graphs) to effectively communicate insights to stakeholders.
+ ### Work Package 5: Reporting and Visualization
+ #####  Summarize key findings in a report and create visualizations (charts and graphs) to effectively find out the insights.
