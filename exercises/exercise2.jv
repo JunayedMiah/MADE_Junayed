@@ -43,8 +43,8 @@ constraint GeoCoordinateConstraint on text: value matches /^\d{1,3}\.\d*, \d{1,3
 
 
 block TreesLoader oftype SQLiteLoader {
-    table: "Trees";
-    file: "./Trees.sqlite";
+    table: "trees";
+    file: "./trees.sqlite";
   }
 
 
