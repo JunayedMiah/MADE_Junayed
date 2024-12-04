@@ -1,0 +1,84 @@
+pipeline TempPipeline {
+
+  RetrieveZip
+      -> TempZipInterpreter;
+  
+  TempZipInterpreter
+      -> TemperatureFilePicker
+      -> ReadCSVData
+      -> CSVTemperature
+      -> ColumnsRename
+      -> TemperatureTableInterpreter
+      -> Temperature_CelsiusToFahrenheit
+      -> Battery_Temperature_CtoF
+      -> DataLoader;
+
+  block RetrieveZip oftype HttpExtractor {
+    url: "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip";
+  }
+
+  block TempZipInterpreter oftype ArchiveInterpreter {
+       archiveType: "zip";
+  }
+
+  block TemperatureFilePicker oftype FilePicker{
+        path: "./data.csv";
+  }
+
+  block ReadCSVData oftype TextFileInterpreter{}
+
+  block CSVTemperature oftype CSVInterpreter {
+        delimiter: ";";
+  }
+
+  block ColumnsRename oftype CellWriter {
+        at: range A1:J1;
+        write: [
+          "id",
+          "producer",
+          "model",
+          "month",
+          "temperature",
+          "",
+          "",
+          "",
+          "",
+          "battery_temperature"
+    ];
+  }
+
+  block TemperatureTableInterpreter oftype TableInterpreter {
+   header: true;
+   columns: [
+     "id" oftype integer,
+     "producer" oftype text,
+     "model" oftype text,
+     "month" oftype integer,
+     "temperature" oftype decimal,
+     "battery_temperature" oftype decimal
+   ];
+  }
+  
+  transform CelsiusToFahrenheit {
+    from Celsius oftype decimal;
+    to Fahrenheit oftype decimal;
+    Fahrenheit: (Celsius * 9/5) + 32;
+  }
+
+  block Temperature_CelsiusToFahrenheit oftype TableTransformer {
+    inputColumns: ['temperature'];
+    outputColumn: 'temperature';
+    uses: CelsiusToFahrenheit;
+  }
+
+  block Battery_Temperature_CtoF oftype TableTransformer {
+    inputColumns: ['battery_temperature'];
+    outputColumn: 'battery_temperature';
+    uses: CelsiusToFahrenheit;
+  }
+
+  block DataLoader oftype SQLiteLoader {
+        table: "temperatures";
+        file: "./temperatures.sqlite";
+  }
+}
