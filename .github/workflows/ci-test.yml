@@ -1,4 +1,4 @@
-name: CI Pipeline for Data Pipeline Project
+name: CI for Data Pipeline
 
 on:
   push:
