@@ -1,0 +1,33 @@
+name: CI Pipeline for Data Pipeline Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    name: Run Unit Tests for Data Pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the Code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set Up Python Environment
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install pandas sqlite3
+
+      # Step 4: Run Tests
+      - name: Run Unit Tests
+        run: |
+          python3 -m unittest project/test.py
