@@ -24,8 +24,9 @@ jobs:
       # Step 3: Install Dependencies
       - name: Install Dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install pandas sqlite3
+             python3 -m pip install --upgrade pip
+             python3 -m pip install pandas
+
 
       # Step 4: Run Tests
       - name: Run Unit Tests
