@@ -1,29 +1,43 @@
-name: CI Pipeline for Project
+name: Continuous Integration (CI)
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger this action on push to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to 'main' branch
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Runs the job on an Ubuntu runner
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      # Step 2: Set up Python 3
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # You can specify 3.8, 3.9, etc., if needed
 
-    - name: Install Dependencies
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install pandas sqlite3
+      # Step 3: Install dependencies from the 'project/requirements.txt'
+      - name: Install dependencies
+        run: |
+          pip install -r project/requirements.txt  # Path to the requirements.txt in the 'project' folder
 
-    - name: Run Tests
-      run: |
-        chmod +x ./project/tests.sh
-        ./project/tests.sh
+      # Step 4: Install necessary system packages (curl, bash, etc.)
+      - name: Install necessary packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl bash
+
+      # Step 5: Make tests.sh executable
+      - name: Make tests.sh executable
+        run: chmod +x ./project/tests.sh
+
+      # Step 6: Run the tests.sh script
+      - name: Run tests.sh
+        run: ./project/tests.sh
