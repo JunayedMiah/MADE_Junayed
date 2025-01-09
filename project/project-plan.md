@@ -30,7 +30,7 @@ Provides detailed records of motor vehicle collisions, including location, time,
 ## Work Packages
 
  ### Work Package 1: Data Collection
- #####  Import tertiary education enrollment data from the data source into a pandas DataFrame for analysis.
+ #####  Import crash reporting and motor vehicle crash data from the data sources into a pandas' DataFrame for analysis.
 
  ### Work Package 2: Data Cleaning
  #####  Address missing values, remove duplicates, and validate the accuracy of enrollment rates and other relevant fields to ensure data integrity.
