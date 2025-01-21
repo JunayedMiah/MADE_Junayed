@@ -1,3 +1,21 @@
+# Reveal Crash Severity: A Comprehensive Analysis of Location, Weather, and Time Factors
+
+## Main Question: What factors contribute to the severity of motor vehicle crashes?
+
+## Description: Motor vehicle crashes significantly impact public safety, infrastructure, and urban planning. This project seeks to identify critical factors contributing to motor vehicle crashes, understand their geographical pattern or trend and temporal distribution, and evaluate the severity of incidents based on contributing factors such as weather, road conditions, and driver behaviour. The results aim to provide meaningful insights for stakeholders and policymakers in transportation safety and urban policy planning.
+
+## Data Sources
+
+### Data Source-1: Montgomery County Crash Data Source
+- Url: https://data.montgomerycountymd.gov/api/views/mmzv-x632/rows.csv?accessType=DOWNLOAD
+- Content: Covers crash details, including date, weather, road conditions and locations. Some important fields include Crash Date/Time, Weather, Road Name, SpeedLimit, etc. It also allows a deep dive into crash patterns in a localized region, facilitating targeted analysis. It also contains multiple dimensions of a crash, enabling thorough.
+- License: Open Data Common Public Domain Dedication and License (ODC PDDL).
+
+### Data Source-2: New York City Vehicle Collision Data Source
+- Url: https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLOAD
+Content: This provides detailed records of motor vehicle collisions, including location, time, injuries, and fatalities. Some major fields include Crash Date, Borough, Number of persons injured, and Latitude.
+- License: Available through NYC OpenData, aligning with open-data principles, ensuring it can be used without legal constraints.
+
 # Methods of Advanced Data Engineering Template Project
 
 This template project provides some structure for your open data project in the MADE module at FAU.
