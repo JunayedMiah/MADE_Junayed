@@ -15,7 +15,7 @@ Motor vehicle crashes significantly impact public safety, infrastructure, and ur
 
 ### Data Source-2: New York City Vehicle Collision Data Source
 - Url: https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLOAD
-Content: This provides detailed records of motor vehicle collisions, including location, time, injuries, and fatalities. Some major fields include Crash Date, Borough, Number of persons injured, and Latitude.
+- Content: This provides detailed records of motor vehicle collisions, including location, time, injuries, and fatalities. Some major fields include Crash Date, Borough, Number of persons injured, and Latitude.
 - License: Available through NYC OpenData, aligning with open-data principles, ensuring it can be used without legal constraints.
 
 # Methods of Advanced Data Engineering Template Project
