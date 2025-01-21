@@ -1,8 +1,10 @@
 # Reveal Crash Severity: A Comprehensive Analysis of Location, Weather, and Time Factors
 
-## Main Question: What factors contribute to the severity of motor vehicle crashes?
+## Main Question: 
+What factors contribute to the severity of motor vehicle crashes?
 
-## Description: Motor vehicle crashes significantly impact public safety, infrastructure, and urban planning. This project seeks to identify critical factors contributing to motor vehicle crashes, understand their geographical pattern or trend and temporal distribution, and evaluate the severity of incidents based on contributing factors such as weather, road conditions, and driver behaviour. The results aim to provide meaningful insights for stakeholders and policymakers in transportation safety and urban policy planning.
+## Description: 
+Motor vehicle crashes significantly impact public safety, infrastructure, and urban planning. This project seeks to identify critical factors contributing to motor vehicle crashes, understand their geographical pattern or trend and temporal distribution, and evaluate the severity of incidents based on contributing factors such as weather, road conditions, and driver behaviour. The results aim to provide meaningful insights for stakeholders and policymakers in transportation safety and urban policy planning.
 
 ## Data Sources
 
